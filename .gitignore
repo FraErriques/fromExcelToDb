@@ -1,0 +1,22 @@
+
+# let's start with directories
+bin/
+obj/
+TempPE/
+Debug/
+Release/
+.vs/
+
+# let's continue with files
+*.dll
+*.exe
+*.pdb
+*.scc
+*.cache
+*.vspscc
+*.csproj.vspscc
+*.user
+*.suo
+*.log
+*.VS2017
+*.txt
