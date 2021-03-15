@@ -3,6 +3,7 @@
 bin/
 obj/
 TempPE/
+Doc/
 Debug/
 Release/
 .vs/
@@ -20,3 +21,7 @@ Release/
 *.log
 *.VS2017
 *.txt
+*.xls
+*.xlsx
+*.prn
+
