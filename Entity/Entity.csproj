@@ -112,10 +112,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="cantina\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="cantina\Example.txt" />
     <Content Include="Doc\Panda_FR937FT_.txt" />
     <Content Include="Doc\Unique_.txt" />
     <Content Include="SQLscript\db_dotazioni2021_.sql" />
