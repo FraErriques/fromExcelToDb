@@ -2,10 +2,12 @@
 # let's start with directories
 bin/
 obj/
-TempPE/
-Doc/
 Debug/
 Release/
+TempPE/
+Doc/
+cantina/
+data/
 .vs/
 
 # let's continue with files
@@ -20,8 +22,6 @@ Release/
 *.suo
 *.log
 *.VS2017
-*.txt
 *.xls
 *.xlsx
 *.prn
-

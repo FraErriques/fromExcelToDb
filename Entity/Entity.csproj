@@ -72,7 +72,15 @@
     <Compile Include="Entities\SIM_recordLayout_.cs" />
     <Compile Include="Parser\TxtFileParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\usp_accessori_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\usp_cellPhone_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\usp_getCardSIMBBTnonInContratto_READ_SERVICE.cs" />
+    <Compile Include="Proxies\usp_getCardSIMTIMnonAttiveInBBT_READ_SERVICE.cs" />
+    <Compile Include="Proxies\usp_Panda_FR937FT_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\usp_PC_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_prova456_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\usp_SIMBBTnonInContratto_LOAD_SERVICE.cs" />
+    <Compile Include="Proxies\usp_SIMTIMnonAttiveInBBT_LOAD_SERVICE.cs" />
     <Compile Include="Proxies\usp_SIM_TIM_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_SIM_BBT_INSERT_SERVICE.cs" />
   </ItemGroup>
@@ -81,10 +89,6 @@
       <Project>{A8FD6DFC-3C34-4DB1-85E3-FB1BAA74A691}</Project>
       <Name>Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Doc\SIM_TIM_.prn" />
-    <None Include="Doc\SIM_BBT_.prn" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -110,6 +114,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="cantina\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Doc\Panda_FR937FT_.txt" />
+    <Content Include="Doc\Unique_.txt" />
+    <Content Include="SQLscript\db_dotazioni2021_.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Doc\Panda_FR937FT_.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -19,6 +19,7 @@ namespace Entity.Proxies
 			string PIN,
 			string PUK,
 			string ICCID,
+			System.DateTime registrazione,
 			string note,
 			System.Data.SqlClient.SqlTransaction trx		//
 		)
@@ -30,7 +31,7 @@ namespace Entity.Proxies
 				cmd.Connection =
 					DbLayer.ConnectionManager.connectWithCustomSingleXpath(
 						"ProxyGeneratorConnections/strings",// compulsory xpath
-						"Tim2021"
+						"dotazioni2021"
 					);
             }
             else
@@ -130,6 +131,20 @@ namespace Entity.Proxies
 				parICCID.Value = System.DBNull.Value;
 			}
 			//
+            System.Data.SqlClient.SqlParameter parregistrazione = new SqlParameter();
+            parregistrazione.Direction = ParameterDirection.Input;
+            parregistrazione.DbType = DbType.DateTime;
+            parregistrazione.ParameterName = "@registrazione";
+			cmd.Parameters.Add( parregistrazione);// add to command
+			if( System.DateTime.MinValue<registrazione )
+			{
+				parregistrazione.Value = registrazione;// checks ok -> ProxyParemeter value assigned to the SqlParameter.
+			}
+			else
+			{
+				parregistrazione.Value = System.DBNull.Value;
+			}
+			//
             System.Data.SqlClient.SqlParameter parnote = new SqlParameter();
             parnote.Direction = ParameterDirection.Input;
             parnote.DbType = DbType.String;
@@ -178,7 +193,7 @@ namespace Entity.Proxies
                 writingSucceeded =
                     LoggingToolsContainerNamespace.LoggingToolsContainer.DecideAndLog(
                         ex,
-                        "eccezione in DataAccess::usp_riscontro8767_INSERT_SERVICE : " + ex.Message,
+                        "eccezione in DataAccess::usp_SIM_TIM_INSERT_SERVICE : " + ex.Message,
 						0 // verbosity
                 );
                 //

@@ -11,14 +11,15 @@ namespace Entity.InsertionManager
     {
         // type
         private delegate int ProxyPointer(
-            string beneficiario,
-            string servizio,
-            string numero,
-            string PIN,
-            string PUK,
-            string ICCID,
-            string note,
-            System.Data.SqlClient.SqlTransaction trx		//
+			string beneficiario,
+			string servizio,
+			string numero,
+			string PIN,
+			string PUK,
+			string ICCID,
+			System.DateTime registrazione,
+			string note,
+			System.Data.SqlClient.SqlTransaction trx		//
         );
         // data
         private ProxyPointer theSelectdProxy = null;
@@ -106,6 +107,7 @@ namespace Entity.InsertionManager
                         ,currentRow.get_PIN()
                         , currentRow.get_PUK()
                         ,currentRow.get_ICCID()
+                        ,currentRow.get_registrazione()
                         , currentRow.get_note()
                         , bulk_SIM_trx//----########################################## transaction ####################################################
                       );
