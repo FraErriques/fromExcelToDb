@@ -528,11 +528,18 @@ namespace ProxyGenerator
                         _placeholderProxyParameter_ += _placeholderCtype_ + " " +_placeholderName_ + ",\r\n";
                         _placeholderDbtype_ = "Double";
                         // Value
+                        //if (!double.IsNaN(un_razionale)  ##### risultato atteso ######################## 
+                        //    && !double.IsInfinity(un_razionale)) 
                         _placeholderProxyParValidity_ =
-                            "double.MinValue!=" + _placeholderName_ +
-                            " && double.MaxValue!=" + _placeholderName_ +
-                            " && double.NaN!=" + _placeholderName_ +
-                            " && double.PositiveInfinity!=" + _placeholderName_;
+                         " !double.IsNaN("+ _placeholderName_ +")" + //  #############################
+                         "  && !double.IsInfinity("+ _placeholderName_ +")";
+                        // ex-code: invalidated by tests.
+                        //_placeholderProxyParValidity_ =
+                        //    "double.MinValue!=" + _placeholderName_ +
+                        //    " && double.MaxValue!=" + _placeholderName_ +
+                        //    " && double.NaN!=" + _placeholderName_ +
+                        //    " && double.PositiveInfinity!=" + _placeholderName_;
+                        //
                         actualValueAssignment = actualValueAssignment.Replace("_placeholderProxyParValidity_", _placeholderProxyParValidity_);
                         actualValueAssignment = actualValueAssignment.Replace("_placeholderNotnullAssignment_",
                             NotnullAssignmentNotbool.Replace("_placeholderName_", _placeholderName_));
@@ -663,11 +670,18 @@ namespace ProxyGenerator
                         _placeholderProxyParameter_ += _placeholderCtype_ + " " + _placeholderName_ + ",\r\n";
                         _placeholderDbtype_ = "Single";
                         // Value
+                        //if (!float.IsNaN(un_razionale)  ##### risultato atteso ######################## 
+                        //    && !float.IsInfinity(un_razionale)) 
                         _placeholderProxyParValidity_ =
-                            "float.MinValue!=" + _placeholderName_ +
-                            " && float.MaxValue!=" + _placeholderName_ +
-                            " && float.NaN!=" + _placeholderName_ +
-                            " && float.PositiveInfinity!=" + _placeholderName_;
+                         " !float.IsNaN(" + _placeholderName_ + ")" + //  #############################
+                         "  && !float.IsInfinity(" + _placeholderName_ + ")";
+                        // ex-code: invalidated by tests.
+                        //_placeholderProxyParValidity_ =
+                        //    "float.MinValue!=" + _placeholderName_ +
+                        //    " && float.MaxValue!=" + _placeholderName_ +
+                        //    " && float.NaN!=" + _placeholderName_ +
+                        //    " && float.PositiveInfinity!=" + _placeholderName_;
+                        //
                         actualValueAssignment = actualValueAssignment.Replace("_placeholderProxyParValidity_", _placeholderProxyParValidity_);
                         actualValueAssignment = actualValueAssignment.Replace("_placeholderNotnullAssignment_",
                             NotnullAssignmentNotbool.Replace("_placeholderName_", _placeholderName_));

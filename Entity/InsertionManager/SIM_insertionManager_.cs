@@ -8,7 +8,7 @@ namespace Entity.InsertionManager
 {
 
     public class SIM_insertionManager_
-    {
+    {//NB. on db dotazioni2021  ################################
         // type
         private delegate int ProxyPointer(
 			string beneficiario,
@@ -90,7 +90,7 @@ namespace Entity.InsertionManager
                 //     <add key="Tim2021"   value="Database=Tim2021;Server=ITBZOW1422\SqlExpress;user=sa;pwd=M1 Sxpdx;"/>
                 //   </strings>
                 bulk_SIM_trx =//---################### NB. customize the transaction ###################################
-                    Common.Connection.TransactionManager.trxOpener("DbConnections/strings", "Tim2021");
+                    Common.Connection.TransactionManager.trxOpener("DbConnections/strings", "dotazioni2021");
             }
             else return cardInsertedRows;//  #insertedRows
             for (int d = 0; null != this.allRows[d]; d++)

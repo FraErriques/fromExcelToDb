@@ -133,10 +133,12 @@ namespace Entity.Proxies
 			//
             System.Data.SqlClient.SqlParameter parregistrazione = new SqlParameter();
             parregistrazione.Direction = ParameterDirection.Input;
-            parregistrazione.DbType = DbType.DateTime;
+            parregistrazione.DbType = DbType.DateTime;//######################### NB. manually modified##################
             parregistrazione.ParameterName = "@registrazione";
 			cmd.Parameters.Add( parregistrazione);// add to command
-			if( System.DateTime.MinValue<registrazione )
+            System.DateTime startInterval = new DateTime(2000, 01, 01);//######################### NB. manually modified##################
+			if( startInterval<registrazione
+                && DateTime.Today >=registrazione)
 			{
 				parregistrazione.Value = registrazione;// checks ok -> ProxyParemeter value assigned to the SqlParameter.
 			}

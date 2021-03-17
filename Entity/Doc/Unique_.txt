@@ -1,0 +1,19 @@
+USE AdventureWorks2012;  
+GO  
+CREATE TABLE Production.TransactionHistoryArchive4  
+ (  
+   TransactionID int NOT NULL,   
+   CONSTRAINT AK_TransactionID UNIQUE(TransactionID)   
+);   
+GO  
+
+
+PK == Primary Key
+AK == Additional Key
+
+named PKs for dotazioni2021
+------------------------------------
+PK_dotazioni2021_SIM_BBT
+AK_dotazioni2021_SIM_BBT
+PK_dotazioni2021_SIM_TIM
+PK_dotazioni2021_FR937FT

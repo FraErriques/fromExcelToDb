@@ -72,6 +72,12 @@
     <Compile Include="Entities\SIM_recordLayout_.cs" />
     <Compile Include="Parser\TxtFileParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxies\draft_db\test_ProxyGenerator_modifica_.cs" />
+    <Compile Include="Proxies\draft_db\test_ProxyGenerator_modifica_W02_.cs" />
+    <Compile Include="Proxies\draft_db\usp_prova456_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\draft_db\usp_SIM_BBT_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\draft_db\usp_SIM_draft_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\draft_db\usp_SIM_TIM_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_accessori_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_cellPhone_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_getCardSIMBBTnonInContratto_READ_SERVICE.cs" />
@@ -112,15 +118,18 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="cantina\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="data\accessori_.txt" />
+    <Content Include="data\cellPhone_.txt" />
+    <Content Include="data\PC_.txt" />
+    <Content Include="data\SIM_BBT_.txt" />
     <Content Include="Doc\Panda_FR937FT_.txt" />
     <Content Include="Doc\Unique_.txt" />
     <Content Include="SQLscript\db_dotazioni2021_.sql" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cantina\.gitignore" />
     <None Include="Doc\Panda_FR937FT_.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

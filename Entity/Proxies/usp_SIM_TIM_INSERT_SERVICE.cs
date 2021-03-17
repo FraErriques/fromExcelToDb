@@ -130,21 +130,23 @@ namespace Entity.Proxies
 			{
 				parICCID.Value = System.DBNull.Value;
 			}
-			//
+            //
             System.Data.SqlClient.SqlParameter parregistrazione = new SqlParameter();
             parregistrazione.Direction = ParameterDirection.Input;
-            parregistrazione.DbType = DbType.DateTime;
+            parregistrazione.DbType = DbType.DateTime;//######################### NB. manually modified##################
             parregistrazione.ParameterName = "@registrazione";
-			cmd.Parameters.Add( parregistrazione);// add to command
-			if( System.DateTime.MinValue<registrazione )
-			{
-				parregistrazione.Value = registrazione;// checks ok -> ProxyParemeter value assigned to the SqlParameter.
-			}
-			else
-			{
-				parregistrazione.Value = System.DBNull.Value;
-			}
-			//
+            cmd.Parameters.Add(parregistrazione);// add to command
+            System.DateTime startInterval = new DateTime(2000, 01, 01);//######################### NB. manually modified##################
+            if (startInterval < registrazione
+                && DateTime.Today >= registrazione)
+            {
+                parregistrazione.Value = registrazione;// checks ok -> ProxyParemeter value assigned to the SqlParameter.
+            }
+            else
+            {
+                parregistrazione.Value = System.DBNull.Value;
+            }
+            //
             System.Data.SqlClient.SqlParameter parnote = new SqlParameter();
             parnote.Direction = ParameterDirection.Input;
             parnote.DbType = DbType.String;

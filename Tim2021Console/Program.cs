@@ -17,11 +17,10 @@ namespace Tim2021Console
         {
             string basePath = ConfigurationLayer.ConfigurationService.GetSingleVoice("datafilePaths/path", "produzione");
             basePath += "\\";
+            string fullPath = basePath + "SIM_BBT_.txt"; // BBT
+            // string fullPath = basePath + "SIM_TIM_.txt"; // TIM
             ////
-            //int res_BBT = Process.fromFileBulkToDb.fromFileBulk_SIMBBT_service( basePath + "SIM_BBT_.prn"); // BBT
-            //int res_TIM = Process.fromFileBulkToDb.originalTIM_service( basePath + "SIM_TIM_.prn"); // TIM
-            ////
-            Process.Tim2021_prova456_.Tim2021_prova456_INSERT_( basePath + "esperimento_2021#03#14_W02_.txt"); // BBT
+            Process.dotazioni2021_SIM_.dotazioni2021_SIM_INSERT( fullPath);
         }// main(
 
 
