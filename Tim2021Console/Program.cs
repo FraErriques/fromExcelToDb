@@ -15,7 +15,7 @@ namespace Tim2021Console
 
         static void Main( string[] args )
         {
-            string basePath = ConfigurationLayer.ConfigurationService.GetSingleVoice("datafilePaths/path", "test");
+            string basePath = ConfigurationLayer.ConfigurationService.GetSingleVoice("datafilePaths/path", "produzione");
             basePath += "\\";
             string fullPath = basePath + "SIM_BBT_.txt"; // BBT
             // string fullPath = basePath + "SIM_TIM_.txt"; // TIM
