@@ -6,7 +6,20 @@ using System.Text;
 
 namespace Entity.InsertionManager
 {
-
+    /// <summary>
+    /// The classes of cathegory tableName_insertionManager_ are devoted to bulk insertion loops, while the 
+    /// Entity classes, i.e. Dbname_Entityname represent a single row, which is a single record.
+    /// The tableName_insertionManager_ is the vector of such records, with the code necessary for the insert operation.
+    /// The seeking of the vector content is realized by means of the Entity.Parser.TxtFileParser which is able to interpret
+    /// a text file, without knowing the record-layout, in terms of field separators only. The appropriate interpretation of each
+    /// field is responsibility of the class Dbname_Entityname, which knows how many of them to expect, in which order; and so knows 
+    /// the data-type of each one of them. So the application logic is:
+    /// - from Process:: instantiate the appropriate insertionManager
+    /// - this will get the Array of Records from Entity::Parser::TxtFileParser
+    /// - the insertionManager will then loop on each scalar of the Record-Array, building an instance of the appropriate Entity for
+    /// each row. Such instance will contain the appropriate interpretation of the fields and will be inserted by a StoredProcedure_Proxy.
+    /// The loop of row-insertion is wrapped in a transaction, which will be committed or not by the insertionManager.
+    /// </summary>
     public class SIM_insertionManager_
     {//NB. on db dotazioni2021  ################################
         // type

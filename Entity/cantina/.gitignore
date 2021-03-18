@@ -6,9 +6,11 @@ Debug/
 Release/
 TempPE/
 .vs/
+# do not publish the following line( i.e. data/ ), for data-privacy reasons.
+data/
+# instead keep the following two directories, for documentation needs.
 # Doc/  keep it for Docs of general nature
 # cantina/ keep it for draft documents
-data/ # do not publish it, for data-privacy reasons.
 
 # let's continue with files
 *.dll
@@ -22,6 +24,7 @@ data/ # do not publish it, for data-privacy reasons.
 *.suo
 *.log
 *.VS2017
-#*.xls # keep it as data source
-#*.xlsx  # keep it as data source
-#*.prn  keep it as data source
+# keep the following extensions, as data sources.
+#*.xls
+#*.xlsx 
+#*.prn 
