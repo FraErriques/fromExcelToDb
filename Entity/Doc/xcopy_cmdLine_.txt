@@ -1,0 +1,1 @@
+ xcopy C:\root\projects\Tim2021Console\  E:\root\testXcp\ /EXCLUDE:xcP.txt /S/E/V/W/I/F

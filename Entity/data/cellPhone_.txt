@@ -1,0 +1,93 @@
+beneficiario	oggetto	matricola 	note
+Bacchiega	SAMSUNG SM-J530F	IMEI 352986101091100	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Baldini	Huawei P Smart 2019	39V4C19725002286	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Barovero Arturo	Huawei P Smart 2019	39V4C20515007087	
+Bellante	Huawei P Smart 2019	_861974044196230	
+Benucci	Huawei P Smart 2019	39V4C20623001516	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del telefono cellulare marca SAMSUNG SM-J510FN IMEI 354603089804176, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Bonasso	Huawei P Smart 2019	39V4C19725001928	 completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del Telefono cellulare marca SAMSUNG SM-J530F IMEI 352986101139057, completo di istruzioni, batteria, auricolare, caricabatteria e cavo dati, guasto
+Buttolo	Huawei P Smart 2019	39V4C20623001217	
+Cardola	Huawei P 30 Lite	_866467048509701	
+Cardola	Huawei P Smart 2019	39V4C19725002147	 completo di istruzioni, batteria, auricolare, caricabatteria e cavo dati
+Cardola	SAMSUNG Galaxy S8 Plus 	 351558093046029	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Cavolo	Huawei P Smart 2019	_861974040841458	
+Conti	Huawei P Smart 2019	39V4C20820006492	
+Corradini	Huawei P Smart 2019	_862094041808940	
+Di Maria	Huawei P Smart 2019	39V4C20515006752	
+Eisenstecken	Huawei P Smart 2019	_861974044221053	
+Erriques	Huawei P Smart 2019	39V4C20311004657	
+Ferrari Alessandro	SAMSUNG SM-J510FN 	IMEI 356388083514538	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del telefono cellulare marca SAMSUNG GT-I9195 IMEI 354899064214957, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati guasto
+Fedele di Catrano	Huawei P Smart 2019	39V4C20515006735	
+Ferrario Rinaldo	Huawei P Smart 2019	862094041814534	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del Telefono cellulare marca SAMSUNG SM-G800F IMEI 356768060104298, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Foderà	SAMSUNG SM-J530F	IMEI 352947096277641	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Francesconi	BLACKBERRY mod 9780	IMEI 354261041316936	completo di istruzioni, batteria, auricolare, caricabatteria
+Gallo	Huawei P Smart 2019	_861974040842258	
+Gallotto	Huawei P Smart 2019	_861974040841946	
+Ianeselli	Huawei P Smart 2019	39V4C20623002219	
+Liuzzi	Huawei P Smart 2019	39V4C20311004138	
+Loffredo	Huawei P Smart 2019	39V4C20820007249	
+Lombardi	Huawei P Smart 2019	_861974044195281	Telefono cellulare marca SAMSUNG SM-J530F IMEI 357463091102300, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del Telefono cellulare marca SAMSUNGSM-J510FN IMEI 351554095962958, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Maggio	Huawei P Smart 2019	39V4C20515007484	
+Malucelli	Huawei P Smart 2019	39V4C20515006707	
+Marrazzo	Huawei P Smart 2019	39V4C20515007483	
+Mazzucato	Huawei P Smart 2019	39V4C19725002193	in sostituzione del Telefono cellulare marca SAMSUNG SM-G530F IMEI 357463091099753, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati - guasto
+Pozzati	Huawei P Smart 2019	39V4C19725001841	"completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del telefono cellulare marca SAMSUNG SM-J510FN IMEI 354603087181411, completo di istruzioni, batteria, auricolare, caricabatteria e cavo dati; obsoleto e guasto"
+Ravera	SAMSUNG SM-J530F 	IMEI 352986101139073	 completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati, in sostituzione del Telefono cellulare marca SAMSUNG SM-J510FN IMEI 356388088218788, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati.
+Ristich	Huawei P Smart 2019	39V4C20311000475	
+Rughetti	Huawei P Smart 2019	39V4C20623001618	
+Salerno	Huawei P Smart 2019	_861974040842233	
+Salvi	Huawei P Smart 2019	865639041606723	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del Telefono cellulare marca SAMSUNG SM-J530F 
+Siracusa	Huawei P Smart 2019	865639041591313	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del Telefono cellulare marca SAMSUNG SM-J510FN IMEI 359613080441865, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Squillante	SAMSUNG SM-J530F 	 352986101092439 	 completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Terzariol	Huawei P Smart 2019	865639041605683	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati in sostituzione del SAMSUNG S4 mini GT-I9195 IMEI 354899064212886, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Toro	SAMSUNG SM-J530F	IMEI 352986101091183	completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati, in sostituzione del telefono cellulare marca SAMSUNG SM-J510FN IMEI 354603089777059, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati.
+Troncone	Huawei P Smart 2019	39V4C20820006792	
+Venditti	Huawei P Smart 2019	39V4C20311004481	
+Zanforlin	Huawei P Smart 2019	_865639041606525	 in sostituzione del telefono cellulare marca SAMSUNG GT-I9195 IMEI 354899064213579, completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati
+Zingarelli	Huawei P Smart 2019	39V4C20311004199	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

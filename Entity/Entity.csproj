@@ -127,6 +127,9 @@
     <Content Include="data\SIM_BBT_.txt" />
     <Content Include="Doc\Panda_FR937FT_.txt" />
     <Content Include="Doc\Unique_.txt" />
+    <Content Include="Doc\xcopyTree_HOWTO_.txt" />
+    <Content Include="Doc\xcopy_cmdLine_.txt" />
+    <Content Include="Doc\xcP.txt" />
     <Content Include="SQLscript\db_dotazioni2021_.sql" />
   </ItemGroup>
   <ItemGroup>

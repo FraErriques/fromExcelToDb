@@ -1,0 +1,8 @@
+
+HOWTO : copiare la struttura di directory di un albero, senza copiare i file contenuti.
+	Tale comando è specificato dall'opzione /T
+	Esso non copia le directory vuote. Se si vuole copiare anche quelle vuote, aggiungere
+	l'opzione /E
+
+esempio:
+ xcopy  "\\00-BBTS002\Human Resources\Servizi Generali\1_Attività\*"  "\\00-BBTS002\data\Schriftverkehr_Corrispondenza\Erriques\2_contabil\"  /T/E

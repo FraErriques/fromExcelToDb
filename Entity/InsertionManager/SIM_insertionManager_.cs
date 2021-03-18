@@ -19,6 +19,10 @@ namespace Entity.InsertionManager
     /// - the insertionManager will then loop on each scalar of the Record-Array, building an instance of the appropriate Entity for
     /// each row. Such instance will contain the appropriate interpretation of the fields and will be inserted by a StoredProcedure_Proxy.
     /// The loop of row-insertion is wrapped in a transaction, which will be committed or not by the insertionManager.
+    /// //
+    /// Il namespace Entity.Entities va considerato come il codice di trattamento scalare del record. Ovvero una riga di tabella per volta.
+    /// Il namespace Entity.InsertionManager va considerato come il codice di aggregazione vettoriale del record, ovvero fa bulk-insert mediante un Array di righe.
+    /// L'Array viene riempito dalla classe Entity.Parser.TxtFileParser, che legge file di testo, senza dipendenza dal tracciato record; ovvero basandosi solo sui delimitatori.
     /// </summary>
     public class SIM_insertionManager_
     {//NB. on db dotazioni2021  ################################
