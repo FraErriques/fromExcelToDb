@@ -6,9 +6,9 @@ Debug/
 Release/
 TempPE/
 .vs/
+data/
 # Doc/  keep it for Docs of general nature
 # cantina/ keep it for draft documents
-data/ # do not publish it, for data-privacy reasons.
 
 # let's continue with files
 *.dll
