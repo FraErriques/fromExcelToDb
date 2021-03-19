@@ -5,6 +5,11 @@ using System.Text;
 
 namespace Entity.Entities
 {
+
+    /// <summary>
+    /// scalar Record of the table [dotazioni2021].[EntityPanda_FR937FT]
+    /// The Record-Array will be built by the appropriate insertionManager, by means of Entity::Parser::TxtFileParser.
+    /// </summary>
     public class Dbdotazioni2021_EntityPanda_FR937FT
     {
         // data (original from db)
