@@ -8,6 +8,12 @@ namespace Entity.Entities
 {
 
 
+    ///
+    // An Entity class is a mirror af a Sql-Relational-Db table. The class data fields match the columns of
+    // the record-layout of the table.
+    // An instance of an Entity class represents a single row, and is to be considered a scalar record.
+    // To manage an array of them, there's an appropriate class, generally called InsertionManager, which loops on rows
+    // and instantiates the matching Entity for each row.
     public class Prime_sequence
     {
         // original db record layout.
