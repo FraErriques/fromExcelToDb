@@ -9,14 +9,22 @@ namespace Process
     public static class dotazioni2021_SIM_
     {
 
-        public static void dotazioni2021_SIM_INSERT( string fullPath )
+        public static void dotazioni2021_SIM_BBT_INSERT( string fullPath )
         {
-//Entity.Entities.SIM_recordLayout_ simI = new Entity.Entities.SIM_recordLayout_(new string[2] { "aa", "bb" });
-            Entity.InsertionManager.SIM_insertionManager_ sim_insertionManager =
-                new Entity.InsertionManager.SIM_insertionManager_("BBT", fullPath);//########  BBT   ############
+            Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_ sim_insertionManager =
+                new Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_("BBT", fullPath);//########  BBT   ############
             sim_insertionManager.splitterTest();
             int insertedRows = sim_insertionManager.insertionManager();
-        }// dotazioni2021_SIM_INSERT( BBT xor TIM
+        }// dotazioni2021_SIM_INSERT( BBT xor TIM : BBT
+
+
+        public static void dotazioni2021_SIM_TIM_INSERT( string fullPath )
+        {
+            Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_ sim_insertionManager =
+                new Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_("TIM", fullPath);//########  BBT   ############
+            sim_insertionManager.splitterTest();
+            int insertedRows = sim_insertionManager.insertionManager();
+        }// dotazioni2021_SIM_INSERT( BBT xor TIM : TIM
 
 
     }// class

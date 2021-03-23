@@ -66,10 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Dbdotazioni2021_EntityPanda_FR937FT.cs" />
+    <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_FR937FT_.cs" />
     <Compile Include="InsertionManager\prova456_insertionManager_.cs" />
     <Compile Include="Parser\FieldParser.cs" />
     <Compile Include="Entities\prova456_recordLayout_.cs" />
-    <Compile Include="InsertionManager\SIM_insertionManager_.cs" />
+    <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_SIM_.cs" />
     <Compile Include="Entities\SIM_recordLayout_.cs" />
     <Compile Include="Parser\TxtFileParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,12 +120,10 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="data\accessori_.txt" />
-    <Content Include="data\cellPhone_.txt" />
-    <Content Include="data\PC_.txt" />
-    <Content Include="data\SIM_BBT_.txt" />
+    <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Doc\Panda_FR937FT_.txt" />
     <Content Include="Doc\Unique_.txt" />
     <Content Include="Doc\xcopyTree_HOWTO_.txt" />

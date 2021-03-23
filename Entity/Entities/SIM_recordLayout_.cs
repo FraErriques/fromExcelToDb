@@ -76,7 +76,7 @@ namespace Entity.Entities
         /// </summary>
         public SIM_recordLayout_( string[] aSingleTxtFileRow)
         {
-            if( 8 != aSingleTxtFileRow.Length)
+            if (8 != aSingleTxtFileRow.Length)
             {
                 throw new System.Exception("Invalid record layout.");
             }// else continue.

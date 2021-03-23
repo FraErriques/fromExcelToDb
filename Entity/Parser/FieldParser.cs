@@ -101,9 +101,19 @@ namespace Entity.Parser
         public static double doubleFieldFilter( string fromExcel )
         {
             double res;//the try-catch block, devoted to Double.Parse(), will decide and init.
+            string filtered_fromExcel = null;
             try
-            {
-                res = Double.Parse(fromExcel);// throws
+            {// PB. On ExcelDbNull( which is empty cell) Double.Parse throws and Nan is assigned.
+                if (null == fromExcel
+                    || "" == fromExcel)
+                {// TODO :solve assigning zero on ExcelDbNull.
+                    filtered_fromExcel = "0";
+                }
+                else
+                {
+                    filtered_fromExcel = fromExcel;// assign the original, when suitable.
+                }
+                res = Double.Parse(filtered_fromExcel);// throws
             }
             catch (System.Exception ex)
             {// something wen wrong, parsing the Excel-floating point rational. So go for DbNull.
@@ -119,12 +129,13 @@ namespace Entity.Parser
         /// </summary>
         /// <param name="fromExcel"></param>
         /// <returns></returns>
-        public static Int64 intFieldFilter( string fromExcel )
+        public static Int64 longFieldFilter( string fromExcel )
         {
             Int64 res;//the try-catch block, devoted to Int.Parse(), will decide and init.
             try
             {
-                res = Int64.Parse( fromExcel);// throws
+                string filtered_fromExcel = removePunctuationFromIntegers(fromExcel);
+                res = Int64.Parse(filtered_fromExcel);// throws
             }
             catch (System.Exception ex)
             {// something wen wrong, parsing the Excel-floating point rational. So go for DbNull.
@@ -135,9 +146,37 @@ namespace Entity.Parser
         }// intFieldFilter
 
 
+        public static Int32 intFieldFilter( string fromExcel )
+        {
+            Int32 res;//the try-catch block, devoted to Int.Parse(), will decide and init.
+            try
+            {
+                string filtered_fromExcel = removePunctuationFromIntegers( fromExcel);
+                res = Int32.Parse( filtered_fromExcel);// throws
+            }
+            catch (System.Exception ex)
+            {// something wen wrong, parsing the Excel-floating point rational. So go for DbNull.
+                string dbg = ex.Message;
+                res = Int32.MinValue;// init to invalid.
+            }
+            return res;// initialized in the try-catch block, devoted to Int.Parse().
+        }// intFieldFilter
 
+
+        private static string removePunctuationFromIntegers( string fromExcel )
+        {
+            char[] theFigures = fromExcel.ToCharArray();// avoid splitters, of any kind.
+            System.Text.StringBuilder sb = new StringBuilder();
+            for (int c = 0; c < theFigures.Length; c++)
+            {
+                if (Char.IsDigit(theFigures[c]))
+                {
+                    sb.Append(theFigures[c]);
+                }// else skip.
+            }// for
+            return sb.ToString();
+        }// removePunctuationFromIntegers
 
 
     }// class
-
 }// nmsp

@@ -12,7 +12,7 @@ namespace Process
         public static void Tim2021_SIM_INSERT( string fullPath )
         {
             Entity.Entities.SIM_recordLayout_ simI = new Entity.Entities.SIM_recordLayout_(new string[2] { "aa", "bb" });
-            Entity.InsertionManager.SIM_insertionManager_ sim_insertionManager = new Entity.InsertionManager.SIM_insertionManager_("Tim", fullPath);
+            Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_ sim_insertionManager = new Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_("Tim", fullPath);
         }// Tim2021_SIM_INSERT(
 
 
