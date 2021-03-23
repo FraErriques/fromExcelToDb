@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dotazioni2021_Multivalent_.cs" />
     <Compile Include="dotazioni2021_PandaFR937FT_.cs" />
     <Compile Include="dotazioni2021_SIM_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

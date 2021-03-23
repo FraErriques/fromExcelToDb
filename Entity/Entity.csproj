@@ -66,7 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Dbdotazioni2021_EntityPanda_FR937FT.cs" />
+    <Compile Include="Entities\Dbdotazioni2021_Entity_Multivalent_.cs" />
     <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_FR937FT_.cs" />
+    <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_Multivalent_.cs" />
     <Compile Include="InsertionManager\prova456_insertionManager_.cs" />
     <Compile Include="Parser\FieldParser.cs" />
     <Compile Include="Entities\prova456_recordLayout_.cs" />

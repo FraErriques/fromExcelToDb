@@ -17,13 +17,15 @@ namespace Tim2021Console
         {
             string basePath = ConfigurationLayer.ConfigurationService.GetSingleVoice("datafilePaths/path", "NO_Git_local_");
             basePath += "\\";
-            string fullPath = basePath + "SIM_BBT_.txt"; // BBT
+            //string fullPath = basePath + "SIM_BBT_.txt"; // BBT
             //string fullPath = basePath + "SIM_TIM_.txt"; // TIM
             //string fullPath = basePath + "Panda_FR937FT_.txt"; // Panda 
+            string fullPath = basePath + "CellPhone_BBT_.txt"; // cellulari
             ////
             //Process.dotazioni2021_PandaFR937FT_.dotazioni2021_PandaFR937FT_rowSplitTest( fullPath);
             //Process.dotazioni2021_PandaFR937FT_.dotazioni2021_PandaFR937FT_BULK_INSERT( fullPath);
-            Process.dotazioni2021_SIM_.dotazioni2021_SIM_BBT_INSERT( fullPath);
+            //Process.dotazioni2021_SIM_.dotazioni2021_SIM_BBT_INSERT( fullPath);
+            Process.dotazioni2021_Multivalent_.dotazioni2021_CellPhone_INSERT(fullPath);
         }// main(
 
 
