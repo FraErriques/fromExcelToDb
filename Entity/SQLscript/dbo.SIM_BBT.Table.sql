@@ -1,0 +1,31 @@
+USE [dotazioni2021]
+GO
+/****** Object:  Table [dbo].[SIM_BBT]    Script Date: 03/24/2021 16:05:32 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[SIM_BBT](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[beneficiario] [varchar](150) NULL,
+	[servizio] [varchar](150) NULL,
+	[numero] [varchar](30) NULL,
+	[PIN] [varchar](4) NULL,
+	[PUK] [varchar](8) NULL,
+	[ICCID] [varchar](150) NULL,
+	[registrazione] [date] NULL,
+	[note] [text] NULL,
+ CONSTRAINT [PK_dotazioni2021_SIM_BBT] PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY],
+ CONSTRAINT [AK_dotazioni2021_SIM_BBT] UNIQUE NONCLUSTERED 
+(
+	[numero] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO

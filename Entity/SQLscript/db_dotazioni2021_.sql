@@ -1,8 +1,6 @@
-
 USE [master]
 GO
-
-/****** Object:  Database [dotazioni2021]    Script Date: 03/16/2021 17:27:41 ******/
+/****** Object:  Database [dotazioni2021]    Script Date: 03/24/2021 16:04:21 ******/
 CREATE DATABASE [dotazioni2021] ON  PRIMARY 
 ( NAME = N'dotazioni2021', FILENAME = N'C:\root\dataSql\dat\dotazioni2021.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
@@ -71,12 +69,9 @@ ALTER DATABASE [dotazioni2021] SET PAGE_VERIFY CHECKSUM
 GO
 ALTER DATABASE [dotazioni2021] SET DB_CHAINING OFF
 GO
-
-
-
 USE [dotazioni2021]
 GO
-/****** Object:  Table [dbo].[SIM_TIM]    Script Date: 03/16/2021 17:27:42 ******/
+/****** Object:  Table [dbo].[SIM_TIM]    Script Date: 03/24/2021 16:04:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -105,9 +100,7 @@ CREATE TABLE [dbo].[SIM_TIM](
 GO
 SET ANSI_PADDING OFF
 GO
-
-
-/****** Object:  Table [dbo].[SIM_BBT]    Script Date: 03/16/2021 17:27:42 ******/
+/****** Object:  Table [dbo].[SIM_BBT]    Script Date: 03/24/2021 16:04:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -136,9 +129,7 @@ CREATE TABLE [dbo].[SIM_BBT](
 GO
 SET ANSI_PADDING OFF
 GO
-
-
-/****** Object:  Table [dbo].[PC]    Script Date: 03/16/2021 17:27:42 ******/
+/****** Object:  Table [dbo].[PC]    Script Date: 03/24/2021 16:04:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -154,18 +145,12 @@ CREATE TABLE [dbo].[PC](
  CONSTRAINT [PK_dotazioni2021_PC] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY],
- CONSTRAINT [AK_dotazioni2021_PC] UNIQUE NONCLUSTERED 
-(
-	[matricola] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 SET ANSI_PADDING OFF
 GO
-
-
-/****** Object:  Table [dbo].[Panda_FR937FT]    Script Date: 03/16/2021 17:27:42 ******/
+/****** Object:  Table [dbo].[Panda_FR937FT]    Script Date: 03/24/2021 16:04:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -189,9 +174,7 @@ CREATE TABLE [dbo].[Panda_FR937FT](
 GO
 SET ANSI_PADDING OFF
 GO
-
-
-/****** Object:  Table [dbo].[cellPhone]    Script Date: 03/16/2021 17:27:42 ******/
+/****** Object:  Table [dbo].[cellPhone]    Script Date: 03/24/2021 16:04:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -207,18 +190,26 @@ CREATE TABLE [dbo].[cellPhone](
  CONSTRAINT [PK_dotazioni2021_cellPhone] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY],
- CONSTRAINT [AK_dotazioni2021_cellPhone] UNIQUE NONCLUSTERED 
-(
-	[matricola] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 SET ANSI_PADDING OFF
 GO
-
-
-/****** Object:  Table [dbo].[accessori]    Script Date: 03/16/2021 17:27:42 ******/
+/****** Object:  Table [dbo].[beneficiariTIM]    Script Date: 03/24/2021 16:04:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING OFF
+GO
+CREATE TABLE [dbo].[beneficiariTIM](
+	[tim_id] [int] NOT NULL,
+	[bbt_beneficiario] [varchar](150) NULL
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[accessori]    Script Date: 03/24/2021 16:04:22 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -234,20 +225,12 @@ CREATE TABLE [dbo].[accessori](
  CONSTRAINT [PK_dotazioni2021_accessori] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY],
- CONSTRAINT [AK_dotazioni2021_accessori] UNIQUE NONCLUSTERED 
-(
-	[matricola] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 SET ANSI_PADDING OFF
 GO
-
-
-
-
-/****** Object:  StoredProcedure [dbo].[usp_SIMTIMnonAttiveInBBT_LOAD]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_SIMTIMnonAttiveInBBT_LOAD]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -261,9 +244,7 @@ from
 where
 tim.numero not in (select numero from [dotazioni2021].[dbo].[SIM_BBT] )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_SIMBBTnonInContratto_LOAD]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_SIMBBTnonInContratto_LOAD]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -277,9 +258,25 @@ from
 where
 bbt.numero not in (select numero from [dotazioni2021].[dbo].[SIM_TIM] )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_SIM_TIM_INSERT]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_SIMBBT_inContratto_LOAD]    Script Date: 03/24/2021 16:04:23 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create procedure [dbo].[usp_SIMBBT_inContratto_LOAD]
+as
+select
+	bbt.beneficiario
+	,bbt.servizio
+	,bbt.numero
+from 
+	SIM_BBT bbt
+	,SIM_TIM tim
+where
+	tim.numero like '%'+bbt.numero+'%'
+order by bbt.beneficiario
+GO
+/****** Object:  StoredProcedure [dbo].[usp_SIM_TIM_INSERT]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -320,9 +317,7 @@ insert into [dotazioni2021].[dbo].[SIM_TIM]
 	@note 
 )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_SIM_BBT_INSERT]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_SIM_BBT_INSERT]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -363,9 +358,7 @@ insert into [dotazioni2021].[dbo].[SIM_BBT]
 	@note 
 )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_PC_INSERT]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_PC_INSERT]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -394,9 +387,7 @@ insert into [dotazioni2021].[dbo].[PC]
 	@note
 )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_Panda_FR937FT_INSERT]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_Panda_FR937FT_INSERT]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -434,9 +425,7 @@ insert into [dotazioni2021].[dbo].[Panda_FR937FT]
 	@gasolio_euro_litro	  -- NB. sosituzione di '/' con '_' nel parametro
 )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_getCardSIMTIMnonAttiveInBBT_READ]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_getCardSIMTIMnonAttiveInBBT_READ]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -444,15 +433,13 @@ GO
 create procedure [dbo].[usp_getCardSIMTIMnonAttiveInBBT_READ]
 as
 select  -- NB. query per nei record TIM, ma non in quelli BBT  -----------
-COUNT(tim.numero)
+COUNT(tim.numero) as 'SIM attiva in Telecom ma in disuso in BBT'
 from
 [dotazioni2021].[dbo].[SIM_TIM] tim
 where
 tim.numero not in (select numero from [dotazioni2021].[dbo].[SIM_BBT] )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_getCardSIMBBTnonInContratto_READ]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_getCardSIMBBTnonInContratto_READ]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -460,15 +447,13 @@ GO
 create procedure [dbo].[usp_getCardSIMBBTnonInContratto_READ]
 as
 select
-COUNT(bbt.numero)
+COUNT(bbt.numero) as 'SIM in elenco BBT non piu attive in contratto'
 from
 [dotazioni2021].[dbo].[SIM_BBT] bbt
 where
 bbt.numero not in (select numero from [dotazioni2021].[dbo].[SIM_TIM] )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_cellPhone_INSERT]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_cellPhone_INSERT]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -497,9 +482,7 @@ insert into [dotazioni2021].[dbo].[cellPhone]
 	@note
 )
 GO
-
-
-/****** Object:  StoredProcedure [dbo].[usp_accessori_INSERT]    Script Date: 03/16/2021 17:27:43 ******/
+/****** Object:  StoredProcedure [dbo].[usp_accessori_INSERT]    Script Date: 03/24/2021 16:04:23 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

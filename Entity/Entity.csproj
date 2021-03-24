@@ -131,7 +131,28 @@
     <Content Include="Doc\xcopyTree_HOWTO_.txt" />
     <Content Include="Doc\xcopy_cmdLine_.txt" />
     <Content Include="Doc\xcP.txt" />
+    <Content Include="SQLscript\dbo.accessori.Table.sql" />
+    <Content Include="SQLscript\dbo.beneficiariTIM.Table.sql" />
+    <Content Include="SQLscript\dbo.cellPhone.Table.sql" />
+    <Content Include="SQLscript\dbo.Panda_FR937FT.Table.sql" />
+    <Content Include="SQLscript\dbo.PC.Table.sql" />
+    <Content Include="SQLscript\dbo.SIM_BBT.Table.sql" />
+    <Content Include="SQLscript\dbo.SIM_TIM.Table.sql" />
+    <Content Include="SQLscript\dbo.usp_accessori_INSERT.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_cellPhone_INSERT.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_getCardSIMBBTnonInContratto_READ.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_getCardSIMTIMnonAttiveInBBT_READ.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_Panda_FR937FT_INSERT.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_PC_INSERT.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_SIMBBTnonInContratto_LOAD.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_SIMBBT_inContratto_LOAD.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_SIMTIMnonAttiveInBBT_LOAD.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_SIM_BBT_INSERT.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_SIM_TIM_INSERT.StoredProcedure.sql" />
     <Content Include="SQLscript\db_dotazioni2021_.sql" />
+    <Content Include="SQLscript\dotazioni2021.Database.sql" />
+    <Content Include="SQLscript\dotazioni2021_dailyRoutine_.sql" />
+    <Content Include="SQLscript\dotazioni2021_reportistica_.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cantina\.gitignore" />
