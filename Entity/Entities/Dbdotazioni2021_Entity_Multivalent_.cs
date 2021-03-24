@@ -8,6 +8,9 @@ namespace Entity.Entities
 
     /// <summary>
     /// This Entity is valid for: {cellPhone, PC, accessori} in db dotazioni2021.
+    /// NB. do not put an unique key on matricola or on any other field that might be NULL. Sql allows
+    /// only one row with NULL, since the unique stops the other. Only on NOT_NULL columns is usable a 
+    /// unique key.
     /// </summary>
     public class Dbdotazioni2021_Entity_Multivalent_
     {
@@ -58,10 +61,10 @@ namespace Entity.Entities
         /// </summary>
         public Dbdotazioni2021_Entity_Multivalent_( string[] aSingleTxtFileRow )
         {
-            if (Dbdotazioni2021_Entity_Multivalent_.cardActiveFields != aSingleTxtFileRow.Length)
-            {
-                throw new System.Exception("Invalid record layout.");
-            }// else continue.
+            //if (Dbdotazioni2021_Entity_Multivalent_.cardActiveFields != aSingleTxtFileRow.Length)
+            //{NB. sometimes Excel puts TABs for unexisting columns, after the last. In such case: disable this check.
+            //    throw new System.Exception("Invalid record layout.");
+            //}// else continue.
             // this.id = ; // [int] IDENTITY no [id] in the txtFile: it will be generated as a db-identity.
             this.beneficiario = Entity.Parser.FieldParser.stringFieldFilter( aSingleTxtFileRow[0]);
             this.oggetto = Entity.Parser.FieldParser.stringFieldFilter( aSingleTxtFileRow[1]);
