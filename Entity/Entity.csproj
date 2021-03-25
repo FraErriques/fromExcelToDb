@@ -66,8 +66,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Dbdotazioni2021_EntityPanda_FR937FT.cs" />
+    <Compile Include="Entities\Dbdotazioni2021_Entity_genericaAuto_.cs" />
     <Compile Include="Entities\Dbdotazioni2021_Entity_Multivalent_.cs" />
     <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_FR937FT_.cs" />
+    <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_genericaAuto_.cs" />
     <Compile Include="InsertionManager\Dbdotazioni2021_InsertionManager_Multivalent_.cs" />
     <Compile Include="InsertionManager\prova456_insertionManager_.cs" />
     <Compile Include="Parser\FieldParser.cs" />
@@ -84,6 +86,7 @@
     <Compile Include="Proxies\draft_db\usp_SIM_TIM_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_accessori_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_cellPhone_INSERT_SERVICE.cs" />
+    <Compile Include="Proxies\usp_genericaAuto_INSERT_SERVICE.cs" />
     <Compile Include="Proxies\usp_getCardSIMBBTnonInContratto_READ_SERVICE.cs" />
     <Compile Include="Proxies\usp_getCardSIMTIMnonAttiveInBBT_READ_SERVICE.cs" />
     <Compile Include="Proxies\usp_Panda_FR937FT_INSERT_SERVICE.cs" />

@@ -7,6 +7,8 @@ select COUNT(*) from dotazioni2021.dbo.Panda_FR937FT
 select COUNT(*) from dotazioni2021.dbo.cellPhone 
 select COUNT(*) from dotazioni2021.dbo.PC
 select COUNT(*) from dotazioni2021.dbo.accessori
+select COUNT(*) from dotazioni2021.dbo.genericaAuto 
+select * from dotazioni2021.dbo.genericaAuto
 
 select COUNT(*) from dotazioni2021.dbo.SIM_BBT
 select COUNT(*) from dotazioni2021.dbo.SIM_TIM
@@ -90,3 +92,75 @@ exec usp_SIMBBTnonInContratto_LOAD
 --,dotazioni2021.dbo.SIM_BBT
 --WHERE 
 --dotazioni2021.dbo.SIM_TIM.numero = dotazioni2021.dbo.SIM_BBT.numero
+
+
+--USE [dotazioni2021]
+--GO
+--SET ANSI_NULLS ON
+--GO
+--SET QUOTED_IDENTIFIER ON
+--GO
+--SET ANSI_PADDING ON
+--GO
+
+--CREATE TABLE [dbo].[genericaAuto](
+--	[id] [int] IDENTITY(1,1) NOT NULL,
+--	[Vettura] [varchar](30) NULL,
+--	[data] [date] NULL,
+--	[km] [int] NULL,
+--	[intervento] [varchar](330) NULL,
+--	[litri] [float] NULL,
+--	[euro] [float] NULL,
+--	[gasolio_euro/litro] [float] NULL,
+-- CONSTRAINT [PK_dotazioni2021_genericaAuto] PRIMARY KEY CLUSTERED 
+--(
+--	[id] ASC
+--)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+--) ON [PRIMARY]
+
+--GO
+--SET ANSI_PADDING OFF
+--GO
+--##
+--USE [dotazioni2021]
+--GO
+--SET ANSI_NULLS ON
+--GO
+--SET QUOTED_IDENTIFIER ON
+--GO
+
+--create procedure [dbo].[usp_genericaAuto_INSERT]
+--	--[id]				[int] IDENTITY(1,1) NOT NULL,
+--	@Vettura			[varchar](30) ,
+--	@data				[date] ,
+--	@km					[int] ,
+--	@intervento			[varchar](330) ,
+--	@litri				[float] ,
+--	@euro				[float] ,
+--	@gasolio_euro_litro	[float] 
+--as
+----
+--insert into [dotazioni2021].[dbo].[genericaAuto]
+--(
+--	-- [id] [int] IDENTITY(1,1) NOT NULL
+--	[Vettura],
+--	[data],
+--	[km],
+--	[intervento],
+--	[litri],
+--	[euro],
+--	[gasolio_euro/litro] -- NB. sosituzione di '/' con '_' nel parametro
+--	   )
+--  values(
+--	--[id] [int] IDENTITY(1,1) NOT NULL
+--	@Vettura			,
+--	@data				,
+--	@km					,
+--	@intervento			,
+--	@litri				,
+--	@euro				,
+--	@gasolio_euro_litro	  -- NB. sosituzione di '/' con '_' nel parametro
+--)
+
+--GO
+
