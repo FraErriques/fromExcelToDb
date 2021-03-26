@@ -137,12 +137,14 @@
     <Content Include="SQLscript\dbo.accessori.Table.sql" />
     <Content Include="SQLscript\dbo.beneficiariTIM.Table.sql" />
     <Content Include="SQLscript\dbo.cellPhone.Table.sql" />
+    <Content Include="SQLscript\dbo.genericaAuto.Table.sql" />
     <Content Include="SQLscript\dbo.Panda_FR937FT.Table.sql" />
     <Content Include="SQLscript\dbo.PC.Table.sql" />
     <Content Include="SQLscript\dbo.SIM_BBT.Table.sql" />
     <Content Include="SQLscript\dbo.SIM_TIM.Table.sql" />
     <Content Include="SQLscript\dbo.usp_accessori_INSERT.StoredProcedure.sql" />
     <Content Include="SQLscript\dbo.usp_cellPhone_INSERT.StoredProcedure.sql" />
+    <Content Include="SQLscript\dbo.usp_genericaAuto_INSERT.StoredProcedure.sql" />
     <Content Include="SQLscript\dbo.usp_getCardSIMBBTnonInContratto_READ.StoredProcedure.sql" />
     <Content Include="SQLscript\dbo.usp_getCardSIMTIMnonAttiveInBBT_READ.StoredProcedure.sql" />
     <Content Include="SQLscript\dbo.usp_Panda_FR937FT_INSERT.StoredProcedure.sql" />
