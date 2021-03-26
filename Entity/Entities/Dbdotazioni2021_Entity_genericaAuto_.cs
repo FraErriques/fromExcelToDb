@@ -75,19 +75,28 @@ namespace Entity.Entities
         /// </summary>
         public Dbdotazioni2021_Entity_genericaAuto_( string[] aSingleTxtFileRow )
         {
-            //if( 7 != aSingleTxtFileRow.Length) Excel may add empty columns.
-            //{
-            //    throw new System.Exception("Invalid record layout.");
-            //}// else continue.
-            // this.id = ; // [int] IDENTITY no [id] in the txtFile: it will be generated as a db-identity. #######
-            this.Vettura = Entity.Parser.FieldParser.stringFieldFilter( aSingleTxtFileRow[0]);
-            this.data = Entity.Parser.FieldParser.dateFieldFilter( aSingleTxtFileRow[1]);
-            this.km = Entity.Parser.FieldParser.intFieldFilter( aSingleTxtFileRow[2]);
-            this.intervento = Entity.Parser.FieldParser.stringFieldFilter(aSingleTxtFileRow[3]);
-            this.litri = Entity.Parser.FieldParser.doubleFieldFilter( aSingleTxtFileRow[4]);
-            this.euro = Entity.Parser.FieldParser.doubleFieldFilter(aSingleTxtFileRow[5]);
-            this.gasolio_euro_litro = Entity.Parser.FieldParser.doubleFieldFilter( aSingleTxtFileRow[6]);
-            //
+            if (7 > aSingleTxtFileRow.Length)// Excel may add empty columns.
+            {// but with genericAuto there meight also be empty rows, between one car and the other.
+                this.Vettura = "";
+                this.data = DateTime.Today;
+                this.km = 0;
+                this.intervento = "RIGA SEPARATRICE";
+                this.litri = 0.0;
+                this.euro = 0.0;
+                this.gasolio_euro_litro = 0.0;
+            }// else continue.
+            else// we have a regular row.
+            {
+                // this.id = ; // [int] IDENTITY no [id] in the txtFile: it will be generated as a db-identity. #######
+                this.Vettura = Entity.Parser.FieldParser.stringFieldFilter(aSingleTxtFileRow[0]);
+                this.data = Entity.Parser.FieldParser.dateFieldFilter(aSingleTxtFileRow[1]);
+                this.km = Entity.Parser.FieldParser.intFieldFilter(aSingleTxtFileRow[2]);
+                this.intervento = Entity.Parser.FieldParser.stringFieldFilter(aSingleTxtFileRow[3]);
+                this.litri = Entity.Parser.FieldParser.doubleFieldFilter(aSingleTxtFileRow[4]);
+                this.euro = Entity.Parser.FieldParser.doubleFieldFilter(aSingleTxtFileRow[5]);
+                this.gasolio_euro_litro = Entity.Parser.FieldParser.doubleFieldFilter(aSingleTxtFileRow[6]);
+            }
+            // anyway set the [id];
             this.id = -1;// only for the sake of not having a warning; [id] is a db-identity and is not available before insert.
         }// Ctor
 

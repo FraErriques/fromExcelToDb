@@ -9,8 +9,10 @@ select COUNT(*) from dotazioni2021.dbo.PC
 select COUNT(*) from dotazioni2021.dbo.accessori
 select COUNT(*) from dotazioni2021.dbo.genericaAuto 
 select * from dotazioni2021.dbo.genericaAuto
+select * from dotazioni2021.dbo.genericaAuto order by Vettura
 select * from dotazioni2021.dbo.genericaAuto where vettura is NULL
 --delete from dotazioni2021.dbo.genericaAuto where vettura is NULL
+select COUNT(*) from dotazioni2021.dbo.genericaAuto 
 select distinct Vettura from dotazioni2021.dbo.genericaAuto
 
 select COUNT(*) from dotazioni2021.dbo.SIM_BBT

@@ -23,7 +23,8 @@ namespace Tim2021Console
             //string fullPath = basePath + "CellPhone_BBT_.txt"; // cellulari
             //string fullPath = basePath + "PC_BBT_.txt"; // PC
             //string fullPath = basePath + "accessori_BBT_.txt"; // PC
-            string fullPath = basePath + "Panda_FM180KE_.txt";// for genericAuto
+            //string fullPath = basePath + "Panda_FM180KE_.txt";// for genericAuto
+            string fullPath = basePath + "wholeAuto_.txt";// mixed PKW
             ////
             //Process.dotazioni2021_PandaFR937FT_.dotazioni2021_PandaFR937FT_rowSplitTest( fullPath);
             //Process.dotazioni2021_PandaFR937FT_.dotazioni2021_PandaFR937FT_BULK_INSERT( fullPath);
