@@ -12,6 +12,8 @@ select * from dotazioni2021.dbo.genericaAuto
 select * from dotazioni2021.dbo.genericaAuto order by Vettura
 select * from dotazioni2021.dbo.genericaAuto where vettura is NULL
 --delete from dotazioni2021.dbo.genericaAuto where vettura is NULL
+select * from dotazioni2021.dbo.genericaAuto where vettura like '%vettura%'
+--delete from dotazioni2021.dbo.genericaAuto where vettura like '%vettura%'
 select COUNT(*) from dotazioni2021.dbo.genericaAuto 
 select distinct Vettura from dotazioni2021.dbo.genericaAuto
 
