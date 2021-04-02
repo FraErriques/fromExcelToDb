@@ -9,6 +9,10 @@ namespace Process
     public static class dotazioni2021_SIM_
     {
 
+        /// <summary>
+        /// da censimento BBT
+        /// </summary>
+        /// <param name="fullPath"></param>
         public static void dotazioni2021_SIM_BBT_INSERT( string fullPath )
         {
             Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_ sim_insertionManager =
@@ -18,6 +22,10 @@ namespace Process
         }// dotazioni2021_SIM_INSERT( BBT xor TIM : BBT
 
 
+        /// <summary>
+        /// da censimento TIM
+        /// </summary>
+        /// <param name="fullPath"></param>
         public static void dotazioni2021_SIM_TIM_INSERT( string fullPath )
         {
             Entity.InsertionManager.Dbdotazioni2021_InsertionManager_SIM_ sim_insertionManager =

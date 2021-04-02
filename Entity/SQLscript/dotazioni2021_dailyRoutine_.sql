@@ -1,14 +1,21 @@
 --truncate table  dotazioni2021.dbo.SIM_BBT
---truncate table dotazioni2021.dbo.Panda_FR937FT
 --truncate table dotazioni2021.dbo.cellPhone
+--truncate table dotazioni2021.dbo.PC
+--truncate table dotazioni2021.dbo.accessori
 
-
-select COUNT(*) from dotazioni2021.dbo.Panda_FR937FT
+select COUNT(*) from dotazioni2021.dbo.SIM_BBT
 select COUNT(*) from dotazioni2021.dbo.cellPhone 
 select COUNT(*) from dotazioni2021.dbo.PC
 select COUNT(*) from dotazioni2021.dbo.accessori
+select * from dotazioni2021.dbo.SIM_BBT
+select * from dotazioni2021.dbo.cellPhone 
+select * from dotazioni2021.dbo.PC
+select * from dotazioni2021.dbo.accessori
+
+select COUNT(*) from dotazioni2021.dbo.Panda_FR937FT
 select COUNT(*) from dotazioni2021.dbo.genericaAuto 
-select * from dotazioni2021.dbo.genericaAuto
+select * from dotazioni2021.dbo.genericaAuto order by id
+--delete from dotazioni2021.dbo.genericaAuto where id>=1301
 select * from dotazioni2021.dbo.genericaAuto order by Vettura
 select * from dotazioni2021.dbo.genericaAuto order by km
 select * from dotazioni2021.dbo.genericaAuto order by euro
