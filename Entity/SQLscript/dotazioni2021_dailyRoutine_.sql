@@ -65,6 +65,39 @@ EXEC [dbo].[usp_getCardSIMBBTnonInContratto_READ]
  --where  [id]=7  or [id]=37
 
 
+USE [dotazioni2021]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_SIMTIMnonAttiveInBBT_LOAD]    Script Date: 04/06/2021 16:30:29 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+--  procedure [dbo].[usp_SIMTIMnonAttiveInBBT_LOAD]
+
+select  -- NB. query per nei record TIM, ma non in quelli BBT  -----------
+tim.*
+from
+[dotazioni2021].[dbo].[SIM_TIM] tim
+where
+tim.numero not in (select numero from [dotazioni2021].[dbo].[SIM_BBT] )
+GO
+
+select  -- NB. query per nei record TIM, ma non in quelli BBT  -----------
+tim.*
+from
+[dotazioni2021].[dbo].[SIM_TIM] tim
+where
+tim.numero not in (select numero from [dotazioni2021].[dbo].[SIM_BBT] )
+order by tim.beneficiario
+GO
+
+select COUNT(*) from dotazioni2021.dbo.SIM_BBT
+select COUNT(*) from dotazioni2021.dbo.SIM_TIM
+
 select COUNT(bbt.id) 
 from 
 	SIM_BBT bbt
@@ -85,98 +118,4 @@ where tim.numero = bbt.numero
 exec usp_SIMBBT_inContratto_LOAD
 exec usp_SIMBBTnonInContratto_LOAD
 	
-
-
 --##
-
--- create tmp table
---select
---	tim.id				as tim_id
---	,bbt.beneficiario	as bbt_beneficiario
---into dotazioni2021.[dbo].[beneficiariTIM]	
---from 
---	dotazioni2021.dbo.SIM_TIM  tim
---	,dotazioni2021.dbo.SIM_BBT bbt
---where
---	tim.numero=bbt.numero
-
--- NB. update from !
---UPDATE dotazioni2021.dbo.SIM_TIM 
---SET dotazioni2021.dbo.SIM_TIM.beneficiario = dotazioni2021.dbo.SIM_BBT.beneficiario
---FROM
---dotazioni2021.dbo.SIM_TIM
---,dotazioni2021.dbo.SIM_BBT
---WHERE 
---dotazioni2021.dbo.SIM_TIM.numero = dotazioni2021.dbo.SIM_BBT.numero
-
-
---USE [dotazioni2021]
---GO
---SET ANSI_NULLS ON
---GO
---SET QUOTED_IDENTIFIER ON
---GO
---SET ANSI_PADDING ON
---GO
-
---CREATE TABLE [dbo].[genericaAuto](
---	[id] [int] IDENTITY(1,1) NOT NULL,
---	[Vettura] [varchar](30) NULL,
---	[data] [date] NULL,
---	[km] [int] NULL,
---	[intervento] [varchar](330) NULL,
---	[litri] [float] NULL,
---	[euro] [float] NULL,
---	[gasolio_euro/litro] [float] NULL,
--- CONSTRAINT [PK_dotazioni2021_genericaAuto] PRIMARY KEY CLUSTERED 
---(
---	[id] ASC
---)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
---) ON [PRIMARY]
-
---GO
---SET ANSI_PADDING OFF
---GO
---##
---USE [dotazioni2021]
---GO
---SET ANSI_NULLS ON
---GO
---SET QUOTED_IDENTIFIER ON
---GO
-
---create procedure [dbo].[usp_genericaAuto_INSERT]
---	--[id]				[int] IDENTITY(1,1) NOT NULL,
---	@Vettura			[varchar](30) ,
---	@data				[date] ,
---	@km					[int] ,
---	@intervento			[varchar](330) ,
---	@litri				[float] ,
---	@euro				[float] ,
---	@gasolio_euro_litro	[float] 
---as
-----
---insert into [dotazioni2021].[dbo].[genericaAuto]
---(
---	-- [id] [int] IDENTITY(1,1) NOT NULL
---	[Vettura],
---	[data],
---	[km],
---	[intervento],
---	[litri],
---	[euro],
---	[gasolio_euro/litro] -- NB. sosituzione di '/' con '_' nel parametro
---	   )
---  values(
---	--[id] [int] IDENTITY(1,1) NOT NULL
---	@Vettura			,
---	@data				,
---	@km					,
---	@intervento			,
---	@litri				,
---	@euro				,
---	@gasolio_euro_litro	  -- NB. sosituzione di '/' con '_' nel parametro
---)
-
---GO
-

@@ -68,10 +68,10 @@
     <Compile Include="dotazioni2021_accessori_.cs" />
     <Compile Include="dotazioni2021_cellPhone_.cs" />
     <Compile Include="dotazioni2021_genericaAuto_.cs" />
-    <Compile Include="dotazioni2021_Multivalent_.cs" />
     <Compile Include="dotazioni2021_PandaFR937FT_.cs" />
     <Compile Include="dotazioni2021_PC_.cs" />
-    <Compile Include="dotazioni2021_SIM_.cs" />
+    <Compile Include="dotazioni2021_SIMcensimentoBBT_.cs" />
+    <Compile Include="dotazioni2021_SIMcensimentoTIM_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tim2021_prova456_.cs" />
     <Compile Include="Tim2021_SIM_.cs" />

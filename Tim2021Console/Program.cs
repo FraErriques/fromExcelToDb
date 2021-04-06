@@ -33,7 +33,7 @@ namespace Tim2021Console
             //Process.dotazioni2021_genericaAuto_.dotazioni2021_genericaAuto_rowSplitTest(fullPath);
             //Process.dotazioni2021_genericaAuto_.dotazioni2021_genericaAuto_BULK_INSERT( fullPath);
             //
-            Process.dotazioni2021_SIM_.dotazioni2021_SIM_BBT_INSERT(fullPath_SIMBBT);
+            Process.dotazioni2021_SIMcensimentoBBT_.dotazioni2021_SIMcensimentoBBT_INSERT( fullPath_SIMBBT);
             Process.dotazioni2021_cellPhone_.dotazioni2021_cellPhone_INSERT(fullPath_cellPhone);
             Process.dotazioni2021_PC_.dotazioni2021_PC_INSERT(fullPath_PC);
             Process.dotazioni2021_accessori_.dotazioni2021_accessori_INSERT(fullPath_sccessori);
