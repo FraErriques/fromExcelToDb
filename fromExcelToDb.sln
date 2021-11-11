@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+# Visual Web Developer Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tim2021Console", "Tim2021Console\Tim2021Console.csproj", "{C00BDCFF-B4ED-4EF5-B8CC-EDCDF4F705FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{A8FD6DFC-3C34-4DB1-85E3-FB1BAA74A691}"

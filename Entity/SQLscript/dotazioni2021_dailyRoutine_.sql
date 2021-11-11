@@ -4,10 +4,129 @@
 --truncate table dotazioni2021.dbo.accessori
 
 select COUNT(*) from dotazioni2021.dbo.SIM_BBT
+select * from dotazioni2021.dbo.SIM_BBT
+where beneficiario in (
+'Eisenstecken'
+,'Gruber'
+,'Mazzucato'
+,'Erriques'
+,'Fornari'
+,'Malucelli'
+,'Marottoli'
+,'Pichierri'
+,'Pozzati'
+,'Rughetti'
+,'Schivari'
+,'Sibilla'
+,'Voza'
+,'Ristich'
+,'Salvi'
+)
+
+
+select 
+	[id],beneficiario,servizio
+	 from dotazioni2021.dbo.SIM_BBT
+where beneficiario in (
+'Eisenstecken'
+,'Gruber'
+,'Mazzucato'
+,'Erriques'
+,'Fornari'
+,'Malucelli'
+,'Marottoli'
+,'Pichierri'
+,'Pozzati'
+,'Rughetti'
+,'Schivari'
+,'Sibilla'
+,'Voza'
+,'Ristich'
+,'Salvi'
+)
+
+select 
+	[id],beneficiario,servizio
+	 from dotazioni2021.dbo.SIM_BBT
+select * from dotazioni2021.dbo.SIM_BBT
+where [id] in (
+25
+,27
+,34
+,38
+,52
+,54
+,57
+,63
+,64
+,67
+,71
+,73
+,74
+,76
+,87
+)
+
+--update dotazioni2021.dbo.SIM_BBT
+--set
+--PIN='3680'
+--,PUK='77869743'
+--,registrazione='8/4/2021'
+--,note=''
+--where [id]=43
+select * from  dotazioni2021.dbo.SIM_BBT
+where [id]=43
+
+select * from dotazioni2021.dbo.cellPhone
+where beneficiario like '%Iusco%'
+
+--insert into dotazioni2021.dbo.cellPhone
+--(--id
+--beneficiario
+--,oggetto
+--,matricola
+--,note ) values(
+----id
+--'Iusco'
+--,'SAMSUNG A21S'
+--,'S/N RF8R31EN6WW'
+--,'completo di istruzioni, batteria, auricolare, caricabatteria, cavo dati'
+--)
+
+
+
+--update dotazioni2021.dbo.PC
+--set note='completo di batteria, carica batteria e docking station della postazione dedicata'
+--where [id]=33
+
+--update dotazioni2021.dbo.SIM_BBT
+--set note='Pacchetto addizionale 100Gb/mese traffico dati, Offerta Commerciale Prot. n. 474246-P; Accordo Quadro Rubr. 323/2017/AADG del 16.11.2017;Atto Integrativo n. 23.'
+--where [id] in (
+--25
+--,27
+--,34
+--,38
+--,52
+--,54
+--,57
+--,63
+--,64
+--,67
+--,71
+--,73
+--,74
+--,76
+--,87
+--)
+
+
+
+select COUNT(*) from dotazioni2021.dbo.SIM_BBT where PIN is NULL
+select COUNT(*) from dotazioni2021.dbo.SIM_BBT where PUK is NULL
 select COUNT(*) from dotazioni2021.dbo.cellPhone 
 select COUNT(*) from dotazioni2021.dbo.PC
 select COUNT(*) from dotazioni2021.dbo.accessori
-select * from dotazioni2021.dbo.SIM_BBT
+select * from dotazioni2021.dbo.SIM_BBT order by beneficiario
 select * from dotazioni2021.dbo.cellPhone 
 select * from dotazioni2021.dbo.PC
 select * from dotazioni2021.dbo.accessori
