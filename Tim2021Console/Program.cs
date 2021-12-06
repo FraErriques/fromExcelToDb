@@ -12,7 +12,10 @@ namespace Tim2021Console
     {
 
         
-
+        /// <summary>
+        /// being this Solution on localhost only, let's try to build for target x64.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main( string[] args )
         {
             string basePath = ConfigurationLayer.ConfigurationService.GetSingleVoice("datafilePaths/path", "NO_Git_local_");
@@ -23,20 +26,23 @@ namespace Tim2021Console
             string fullPath_sccessori = basePath + "accessori_BBT_.txt"; // PC
 
             //string fullPath = basePath + "SIM_TIM_.txt"; // contratto TIM utenze verificate da TIM.
-            //string fullPath = basePath + "Panda_FR937FT_.txt"; // Panda 
+            string fullPath = basePath + "Panda_FR937FT_.txt"; // Panda 
             //string fullPath = basePath + "Panda_FM180KE_.txt";// for genericAuto
             //string fullPath = basePath + "wholeAuto_.txt";// mixed PKW
             //string fullPath = basePath + "wholeAuto_2021#03#30_.txt";// mixed PKW
-            ////
+            //
             //Process.dotazioni2021_PandaFR937FT_.dotazioni2021_PandaFR937FT_rowSplitTest( fullPath);
             //Process.dotazioni2021_PandaFR937FT_.dotazioni2021_PandaFR937FT_BULK_INSERT( fullPath);
             //Process.dotazioni2021_genericaAuto_.dotazioni2021_genericaAuto_rowSplitTest(fullPath);
             //Process.dotazioni2021_genericaAuto_.dotazioni2021_genericaAuto_BULK_INSERT( fullPath);
             //
-            Process.dotazioni2021_SIMcensimentoBBT_.dotazioni2021_SIMcensimentoBBT_INSERT( fullPath_SIMBBT);
-            Process.dotazioni2021_cellPhone_.dotazioni2021_cellPhone_INSERT(fullPath_cellPhone);
-            Process.dotazioni2021_PC_.dotazioni2021_PC_INSERT(fullPath_PC);
-            Process.dotazioni2021_accessori_.dotazioni2021_accessori_INSERT(fullPath_sccessori);
+            //Process.dotazioni2021_SIMcensimentoBBT_.dotazioni2021_SIMcensimentoBBT_INSERT( fullPath_SIMBBT);
+            //Process.dotazioni2021_cellPhone_.dotazioni2021_cellPhone_INSERT(fullPath_cellPhone);
+            //Process.dotazioni2021_PC_.dotazioni2021_PC_INSERT(fullPath_PC);
+            //Process.dotazioni2021_accessori_.dotazioni2021_accessori_INSERT(fullPath_sccessori);
+            //
+            System.Data.DataTable simTIMnonAttiveInBBT =
+                Process.dotazioni2021_getCardSIMTIMnonAttiveInBBT_READ_.dotazioni2021_getCardSIMTIMnonAttiveInBBT_READ_method();
         }// main(
 
 

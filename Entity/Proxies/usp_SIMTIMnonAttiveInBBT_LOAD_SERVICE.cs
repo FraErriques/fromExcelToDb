@@ -20,7 +20,7 @@ namespace Entity.Proxies
             SqlCommand cmd = new SqlCommand();
             cmd.Connection =
                 DbLayer.ConnectionManager.connectWithCustomSingleXpath(
-                    "ProxyGeneratorConnections/strings",// compulsory xpath
+                    "DbConnections/strings",// NB. outside transaction; not called from insertion-manager.
                     "dotazioni2021"
                 );
             if( null==cmd.Connection)
